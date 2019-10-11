@@ -1,2 +1,2 @@
 # gbh-simulator
-Grid-based hydrodynamics in Python 2.7.
+Simulation of continous media using the grid-based hydrodynamic method.
