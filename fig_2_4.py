@@ -51,6 +51,10 @@ def main():
     ax[0][0].plot(time_n, back_int_func_t15)
     ax[0][0].plot(time_n, cent_int_func_t15)
     ax[0][0].plot(time_n, np.exp(-time_n), 'r')
+    ax[0][0].set_xlim([0.0, 12.0])
+    ax[0][0].set_ylim([-1.5, 1.5])
+    ax[0][0].set_xlabel('t')
+    ax[0][0].set_ylabel('u(t)')
 
     delta_t = 2.05
     time_n = np.linspace(0.0, 12.0, num=12.0/delta_t)
@@ -75,6 +79,9 @@ def main():
     ax[0][1].plot(time_n, back_int_funct_205)
     ax[0][1].plot(time_n, cent_int_funct_205)
     ax[0][1].plot(time_n, np.exp(-time_n), 'r')
+    ax[0][1].set_xlim([0.0, 12.0])
+    ax[0][1].set_ylim([-1.5, 1.5])
+    ax[0][1].set_xlabel('t')
 
     delta_t = 0.45
     time_n = np.linspace(0.0, 12.0, num=12.0/delta_t)
@@ -88,6 +95,10 @@ def main():
 
     ax[1][0].plot(time_n, scheme_233_int_func_t045)
     ax[1][0].plot(time_n, np.exp(-time_n), 'r')
+    ax[1][0].set_xlim([0.0, 12.0])
+    ax[1][0].set_ylim([-1.5, 1.5])
+    ax[1][0].set_xlabel('t')
+    ax[1][0].set_ylabel('u(t)')
 
     delta_t = 0.045
     time_n = np.linspace(0.0, 12.0, num=12.0/delta_t)
@@ -101,7 +112,12 @@ def main():
 
     ax[1][1].plot(time_n, scheme_233_int_func_t0045)
     ax[1][1].plot(time_n, np.exp(-time_n), 'r')
+    ax[1][1].set_xlim([0.0, 12.0])
+    ax[1][1].set_ylim([-1.5, 1.5])
+    ax[1][1].set_xlabel('t')
 
     plt.show()
+
+    fig.savefig('fig_2_4.jpg')
 
 main()
