@@ -50,6 +50,7 @@ def main():
     ax[0][0].plot(time_n, forw_int_func_t15)
     ax[0][0].plot(time_n, back_int_func_t15)
     ax[0][0].plot(time_n, cent_int_func_t15)
+    ax[0][0].plot(time_n, np.exp(-time_n), 'r')
 
     delta_t = 2.05
     time_n = np.linspace(0.0, 12.0, num=12.0/delta_t)
@@ -73,6 +74,7 @@ def main():
     ax[0][1].plot(time_n, forw_int_funct_205)
     ax[0][1].plot(time_n, back_int_funct_205)
     ax[0][1].plot(time_n, cent_int_funct_205)
+    ax[0][1].plot(time_n, np.exp(-time_n), 'r')
 
     delta_t = 0.45
     time_n = np.linspace(0.0, 12.0, num=12.0/delta_t)
@@ -85,6 +87,7 @@ def main():
         scheme_233_int_func_t045.append(scheme_233(u_last, diff_eq_current, delta_t))
 
     ax[1][0].plot(time_n, scheme_233_int_func_t045)
+    ax[1][0].plot(time_n, np.exp(-time_n), 'r')
 
     delta_t = 0.045
     time_n = np.linspace(0.0, 12.0, num=12.0/delta_t)
@@ -97,6 +100,8 @@ def main():
         scheme_233_int_func_t0045.append(scheme_233(u_last, diff_eq_current, delta_t))
 
     ax[1][1].plot(time_n, scheme_233_int_func_t0045)
+    ax[1][1].plot(time_n, np.exp(-time_n), 'r')
 
     plt.show()
+
 main()
